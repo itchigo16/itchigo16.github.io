@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <title>Le Numérique fait il perdre la mémoire</title>
+</head>
+<body>
+<img src="images/hands-in-digital-universe-background.jpg"
+     alt="Representation de La Création d'Adam avec des mains dans le style numérique / technologique"
+     id="backgroundImage">
+<header>
+    <nav>
+        <div class="mainMenuDiv" id="mainMenuDiv">
+            <div class="menu" id="Accueil">
+                <a href="index.html">Accueil</a>
+            </div>
+            <div class="menu" id="Historique">
+                <a href="historique.html">Historique</a>
+                <div class="sous_menu"></div>
+                <div class="sous_menu"></div>
+                <div class="sous_menu"></div>
+            </div>
+            <div class="menu" id="Biologie">
+                <a href="biologie.html">Biologie</a>
+                <div class="sous_menu"></div>
+                <div class="sous_menu"></div>
+                <div class="sous_menu"></div>
+            </div>
+            <div class="menu" id="Aujourd'hui">
+                <a href="aujourd'hui.html">Aujourd'hui</a>
+                <div class="sous_menu"></div>
+                <div class="sous_menu"></div>
+                <div class="sous_menu"></div>
+            </div>
+            <div class="menu" id="Consequences">
+                <a href="consequences.html">Consequences</a>
+                <div class="sous_menu"></div>
+                <div class="sous_menu"></div>
+                <div class="sous_menu"></div>
+            </div>
+            <div class="menu" id="Contact">
+                <a href="contact.html" id="actuelPage">Contact</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="element">
+        <form action="" method="get">
+            <fieldset>
+                <legend>Informations personnelles</legend>
+                <div>
+                    <label for="surname">Nom*</label>
+                    <input id="surname" name="uname" type="text" required>
+                </div>
+                <div>
+                    <label for="firstname">Prenom</label>
+                    <input type="text" id="firstname" name="fname">
+                </div>
+                <div>
+                    <label for="email">Email*</label>
+                    <input type="email" name="email" id="email" placeholder="yourmail@domain.com" required>
+                </div>
+                <div>
+                    <label>Sexe </label>
+                    <label for="sexeM">M</label>
+                    <input type="radio" id="sexeM" name="sexe" value="Homme">
+
+                    <label for="sexeF">F</label>
+                    <input type="radio" id="sexeF" name="sexe" value="Femme">
+
+                </div>
+                <div>
+                    <label for="date">Date de naissance</label>
+                    <input type="date" id="date" name="date">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Inscription</legend>
+                <div>
+                    <label for="commentaire">Commentaire</label><br>
+                    <textarea name="commentaire" id="commentaire" cols="30" rows="5"
+                              placeholder="Envoyez nous votre avis !"></textarea>
+                </div>
+                <div>
+                    <label for="passwrd">Mot de passe*</label>
+                    <input type="password" id="passwrd" name="password" required
+                           pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+                </div>
+                <div>
+                    <label for="clauses">J'accepte les conditions d'utilisations*</label>
+                    <input type="checkbox" name="clauses" id="clauses" required>
+                </div>
+                <div>
+                    <label>Aidez nous!</label>
+                    <label for="nv_engagement5">Basic (5€)</label>
+                    <input type="radio" name="nv_engagement" id="nv_engagement5" value="5e">
+                    <label for="nv_engagement15">Gold (15€)</label>
+                    <input type="radio" name="nv_engagement" id="nv_engagement15" value="15e">
+                    <label for="nv_engagement50">Diamond (50€)</label>
+                    <input type="radio" name="nv_engagement" id="nv_engagement50" value="50e">
+                </div>
+            </fieldset>
+            <div>
+                <input type="submit" value="Envoyer">
+            </div>
+        </form>
+    </div>
+</main>
+<footer>
+    <div>
+
+    </div>
+</footer>
+</body>
+</html>
