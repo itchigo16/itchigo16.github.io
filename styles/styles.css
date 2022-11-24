@@ -1,3 +1,9 @@
+.burger {
+    right: 0;
+    top: 0;
+    visibility: hidden;
+}
+
 body {
     background-color: #1B262C;
     display: flex;
@@ -68,6 +74,10 @@ nav {
     color: #BBE1FA;
 }
 
+.menu > div > a:hover {
+    color: #BBE1FA;
+}
+
 #actuelPage {
     color: #0F4C75;
 }
@@ -101,6 +111,32 @@ form {
 input {
     font-size: 25px;
     max-width: 200px;
+}
+
+@media screen and (max-width: 950px) {
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        visibility: visible;
+        padding: 10px;
+        position: absolute;
+        font-size: 30px;
+
+    }
+
+    .burger:hover .respMenu{
+        visibility: visible;
+    }
+
+    .respMenu {
+        visibility: hidden;
+        background-color: #1B262C;
+    }
+
+    nav {
+        visibility: hidden;
+    }
 }
 
 
