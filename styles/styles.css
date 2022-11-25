@@ -1,7 +1,10 @@
 .burger {
-    right: 0;
+    display: flex;
     top: 0;
+    right: 0;
     visibility: hidden;
+    flex-direction: column;
+    justify-content: right;
 }
 
 body {
@@ -78,7 +81,7 @@ nav {
     color: #BBE1FA;
 }
 
-#actuelPage {
+.menu > .actuelPage {
     color: #0F4C75;
 }
 
@@ -114,10 +117,9 @@ input {
 }
 
 @media screen and (max-width: 950px) {
+
     .burger {
-        display: flex;
-        flex-direction: column;
-        justify-content: right;
+        justify-content: flex-end;
         visibility: visible;
         padding: 10px;
         position: absolute;
@@ -127,6 +129,12 @@ input {
 
     .burger:hover .respMenu{
         visibility: visible;
+    }
+
+    #imgBurgerDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
     }
 
     .respMenu {
