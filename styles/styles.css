@@ -218,7 +218,7 @@ aside > p {
         position: fixed;
         text-align: center;
         max-width: 60%;
-        top: 25px;
+        top: 10px;
         margin: auto;
     }
 
@@ -237,7 +237,8 @@ aside > p {
 
 @media screen and (max-width: 380px) {
     #title {
-        left: 10px;
+        left: 0;
+        font-size: 25px;
     }
 }
 
