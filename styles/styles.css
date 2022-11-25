@@ -132,11 +132,11 @@ input {
 
     }
     #imgBurgerDiv {
-        transform: scale(90%);
+        transform: scale(0.9);
     }
 
     .burger:hover #imgBurgerDiv {
-        transform: scale(110%) translateX(-5px);
+        transform: scale(1.1) translateX(-5px);
         transition-duration: 200ms;
     }
 
