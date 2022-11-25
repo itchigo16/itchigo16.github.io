@@ -121,17 +121,6 @@ main {
     margin: auto 10px;
 }
 
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input {
-    font-size: 25px;
-    max-width: 200px;
-}
-
 .contenuPrincipal {
     margin: 25px 10px;
     display: flex;
@@ -160,17 +149,16 @@ aside {
     background: rgba(40, 42, 58, 0.90);
     border-radius: 15px;
     font-size: 23px;
-    text-align: left;
     color: #6e85b2;
+    text-align: left;
 
 }
-
 
 aside > p, aside > a {
     margin: 10px auto;
 }
 
-aside > a:hover {
+aside a:hover {
     font-size: 100%;
 }
 
@@ -178,6 +166,15 @@ aside > p {
     text-decoration: underline;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    font-size: 25px;
+    max-width: 200px;
+}
 
 @media screen and (max-width: 950px) {
 
