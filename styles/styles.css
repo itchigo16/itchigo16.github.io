@@ -1,10 +1,7 @@
 .burger {
-    display: flex;
+    display: none;
     top: 0;
     right: 0;
-    visibility: hidden;
-    flex-direction: column;
-    justify-content: right;
 }
 
 body {
@@ -119,16 +116,18 @@ input {
 @media screen and (max-width: 950px) {
 
     .burger {
+        display: flex;
+        flex-direction: column;
         justify-content: flex-end;
-        visibility: visible;
         padding: 10px;
         position: absolute;
         font-size: 30px;
 
     }
 
-    .burger:hover .respMenu{
-        visibility: visible;
+    .burger:hover .respMenu {
+        display: flex;
+        flex-direction: column;
     }
 
     #imgBurgerDiv {
@@ -138,14 +137,17 @@ input {
     }
 
     .respMenu {
-        visibility: hidden;
+        display: none;
         background-color: #1B262C;
     }
 
     nav {
         visibility: hidden;
     }
+
 }
+
+
 
 
 
