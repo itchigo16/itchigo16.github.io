@@ -1,9 +1,3 @@
-.burger {
-    display: none;
-    top: 0;
-    right: 0;
-}
-
 body {
     background-color: #121213;
     display: flex;
@@ -27,6 +21,16 @@ header {
     right: 0;
 
     position: fixed;
+}
+
+.burger {
+    display: none;
+    top: 0;
+    right: 0;
+}
+
+#title {
+    display: none;
 }
 
 
@@ -112,6 +116,11 @@ input {
 
 @media screen and (max-width: 950px) {
 
+    header {
+        backdrop-filter: blur(5px);
+    }
+
+
     .burger {
         display: flex;
         flex-direction: column;
@@ -119,8 +128,13 @@ input {
         padding: 10px;
         position: absolute;
         font-size: 30px;
+        max-width: 100%;
 
     }
+    #imgBurgerDiv {
+        transform: scale(90%);
+    }
+
     .burger:hover #imgBurgerDiv {
         transform: scale(110%) translateX(-5px);
         transition-duration: 200ms;
@@ -129,6 +143,7 @@ input {
     .burger:hover .respMenu {
         display: flex;
         flex-direction: column;
+        border-radius: 10px;
     }
 
     #imgBurgerDiv {
@@ -144,6 +159,16 @@ input {
 
     nav {
         visibility: hidden;
+    }
+
+    #title {
+        color: #6E85B2FF;
+        display: block;
+        position: fixed;
+        text-align: center;
+        max-width: 60%;
+        top: 25px;
+        margin: auto;
     }
 
 }
