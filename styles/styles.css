@@ -16,15 +16,12 @@ body {
 }
 
 
-header, footer {
+header{
     height: 10vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-content: center;
-}
-
-header {
 
     z-index: 10;
     top: 0;
@@ -140,7 +137,7 @@ article {
 }
 
 aside {
-    width: 25vw;
+    width: 15vw;
     display: flex;
     padding: 20px;
     flex-direction: column;
@@ -176,13 +173,11 @@ input {
 
 @media screen and (max-width: 950px) {
 
+
     header {
         backdrop-filter: blur(5px);
-        top:0;
         left: 0;
-        width: 100vw;
         height: 15vh;
-        position: fixed;
     }
 
     .burger {
@@ -258,7 +253,6 @@ input {
 @media screen and (max-width: 380px) {
     #title {
         left: 0;
-        font-size: 25px;
     }
 }
 
