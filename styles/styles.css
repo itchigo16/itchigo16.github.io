@@ -4,36 +4,28 @@ html {
 
 body {
     background-color: #121213;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
 }
 
 #backgroundImage {
-    width: 99vw;
+    width: 100%;
     filter: blur(5px);
 }
 
 
 header{
     height: 10vh;
-    width: 99vw;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    width: 100vw;
 
     z-index: 10;
     top: 0;
-    right: 0;
 
     position: fixed;
 }
 
+
 .burger {
     display: none;
-    top: 0;
-    right: 0;
 }
 
 #title {
@@ -43,7 +35,6 @@ header{
 
 nav {
     display: flex;
-    position: relative;
     flex-direction: row;
     justify-content: center;
     border-radius: 20px;
@@ -51,18 +42,15 @@ nav {
 }
 
 .mainMenuDiv {
-    padding: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-bottom: 2px dashed #6e85b2;
 }
 
 .mainMenuDiv > .menu {
+    margin: 5px;
     border: 2px solid #6e85b2;
     border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
     font-size: 35px;
 }
 
@@ -74,7 +62,6 @@ a {
 
 a:hover {
     color: #5c527f;
-    font-size: 110%;
 }
 
 p > a {
@@ -90,43 +77,47 @@ p > a:hover {
 
 
 main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
     top: 10vh;
-    margin: 10px 25px;
-    justify-items: center;
+    left: 0;
     text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
     position: absolute;
 }
 
+main > div {
+    width: 100%;
+}
+
+
 .element {
-    margin: auto auto 20px;
     background: rgba(40, 42, 58, 0.90);
-    max-width: 800px;
     border-radius: 20px;
-    padding: 15px;
-
-    font-size: 30px;
     color: #6e85b2;
-
+    font-size: 30px;
     filter: drop-shadow(3px 2px 3px rgba(0, 0, 0, 0.15));
 }
 
 .imagePrincipale {
     border-radius: 20px;
-    margin: auto 10px;
 }
 
 .contenuPrincipal {
-    margin: 25px 10px;
+    margin: 30px 0;
     display: flex;
     flex-direction: row;
     align-items: stretch;
+    justify-content: center;
 }
 
 article {
-    margin: auto 25px 10px;
+    margin-right: 25px;
+    padding: 5px;
     background: rgba(40, 42, 58, 0.90);
     border-radius: 20px;
-    padding: 15px;
     max-width: 75vw;
 
     font-size: 25px;
@@ -137,9 +128,7 @@ article {
 }
 
 aside {
-    width: 15vw;
     display: flex;
-    padding: 20px;
     flex-direction: column;
     background: rgba(40, 42, 58, 0.90);
     border-radius: 15px;
@@ -154,9 +143,6 @@ aside > p, aside > a {
     margin: 10px auto;
 }
 
-aside a:hover {
-    font-size: 100%;
-}
 
 aside > p {
     text-decoration: underline;
@@ -172,31 +158,38 @@ input {
     max-width: 200px;
 }
 
+
+
 @media screen and (max-width: 950px) {
 
+    nav {
+        display: none;
+    }
+    aside {
+        display: none;
+    }
 
     header {
+        display: flex;
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         backdrop-filter: blur(5px);
-        left: 0;
-        height: 15vh;
+    }
+
+    #title {
+        color: #6E85B2FF;
+        display: inherit;
+        text-align: center;
+        font-size: 5vw;
     }
 
     .burger {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        padding: 10px;
-        position: absolute;
+        position: relative;
         font-size: 30px;
-    }
-
-    #imgBurgerDiv {
-        transform: scale(0.9);
-    }
-
-    .burger:hover #imgBurgerDiv {
-        transform: scale(1.1) translateX(-5px);
-        transition-duration: 200ms;
     }
 
     .burger:hover .respMenu {
@@ -206,55 +199,22 @@ input {
     }
 
     #imgBurgerDiv {
-        display: flex;
-        flex-direction: row;
-        justify-content: right;
+        display: inherit;
     }
 
     .respMenu {
+        position: absolute;
+        top: 10vh;
+        right: 2vw;
         display: none;
         background-color: rgba(40, 42, 58, 0.9);
     }
 
-    nav {
-        display: none;
+    .imagePrincipale, #title, article {
+        max-width:75vw;
     }
 
 
-    #title {
-        color: #6E85B2FF;
-        display: block;
-        position: fixed;
-        text-align: center;
-        max-width: 60vw;
-        top: 10px;
-        margin: auto;
-        font-size: 4vh;
-    }
-
-    .imagePrincipale {
-        max-width: 99vw;
-        margin: 25px auto;
-    }
-
-
-    aside {
-        display: none;
-    }
-
-    .element {
-        max-width: 90vw;
-        font-size: 5vw;
-    }
-
-
-
-}
-
-@media screen and (max-width: 380px) {
-    #title {
-        left: 0;
-    }
 }
 
 
