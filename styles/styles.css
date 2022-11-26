@@ -214,6 +214,10 @@ input {
         max-width:75vw;
     }
 
+    .references {
+        word-wrap: break-word; /*permet au lien de ne pas depasser le parent*/
+    }
+
 
 }
 
