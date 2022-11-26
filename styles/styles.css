@@ -1,38 +1,79 @@
+/******************************************************* Import des polices *******************************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/******************************************************* Scrollbar *******************************************************/
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #343148
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4D496C
+}
+
+/******************************************************* Général *******************************************************/
+
+/* Paramétrage du scroll */
 html {
     scroll-behavior: smooth;
 }
 
+/* Stylisation générale du body */
 body {
     background-color: #121213;
     margin: 0;
 }
 
+/* Stylisation de l'image de fond */
 #backgroundImage {
-    width: 100%;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    background-size: cover;
+    position: fixed;
     filter: blur(5px);
+    max-width: 100%;
+    height: auto;
 }
 
-
+/* Stylisation du header */
 header {
     height: 10vh;
     width: 100vw;
-
     z-index: 10;
     top: 0;
-
     position: fixed;
 }
 
-
+/* Cache le menu burger à l'état initial */
 .burger {
     display: none;
 }
 
+/* Cache le titre du haut à l'état initial */
 #title {
     display: none;
 }
 
+/* Stylisation des titres */
+#title, .title{
+    text-align: center;
+    text-decoration: underline #a7b0ff;
+    font-family: "Montserrat Medium", sans-serif;
+    color: #E0E4EE;
+}
 
+/* Stylisation du fond du menu de navigation */
 nav {
     display: flex;
     flex-direction: row;
@@ -41,51 +82,87 @@ nav {
     backdrop-filter: blur(5px);
 }
 
+/* Positionnement des items du menu */
 .mainMenuDiv {
     display: flex;
     flex-direction: row;
     align-items: baseline;
 }
 
+/* Stylisation des items du menu */
 .mainMenuDiv > .menu {
     margin: 5px;
     border: 2px solid #6e85b2;
     border-radius: 5px;
     font-size: 35px;
     text-align: center;
+    padding: 5px;
+    font-family: "Bebas Neue", sans-serif ;
+    transition: linear 0.3s;
 }
 
+/* Stylisation des items du menu quand surlignement */
+.menu a:hover {
+    letter-spacing: 2px;
+    animation-name: menuAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+}
+
+/* Animation des items du menu */
+@keyframes menuAnimation {
+    from {
+        color: #a7b0ff;
+    }
+    to {
+        color: #6e85b2;
+    }
+}
+
+/* Cache le sous-menu à l'état initial */
 .sous_menu {
     display: none;
 }
 
+/* Positionnement du sous-menu quand le menu quand surlignement */
 .menu:hover > .sous_menu {
     display: inherit;
 }
 
+/* Stylisation des items du sous-menu */
+.respMenu a{
+    font-family: "Bebas Neue", sans-serif;
+    transition: none;
+    letter-spacing: 0!important;
+}
+
+/* Stylisation des liens */
 a {
     color: #6e85b2;
     text-decoration: none;
     text-shadow: rgba(38, 28, 44, 0.49) 2px 3px;
+    transition: linear 0.3s;
 }
 
-a:hover {
-    color: #5c527f;
-}
-
+/* Stylisation des liens dans les paragraphes */
 p > a {
-    color: #5c527f;
+    font-weight: bold;
+    text-decoration: underline #a7b0ff;
 }
 
+/* Stylisation des liens dans les paragraphes quand surlignement */
 p > a:hover {
     font-size: 100%;
+    transition: linear 0.3s;
 }
 
+/* Stylisation de l'item du menu de la page actuelle */
 .menu > .actuelPage {
     color: #5c527f;
 }
 
-
+/* Positionnement de la section main */
 main {
     display: flex;
     width: 100%;
@@ -98,47 +175,61 @@ main {
     position: absolute;
 }
 
+/* Positionnement des divs dans la section main */
 main > div {
     width: 100%;
 }
 
-
+/* Stylisation des divs element */
 .element {
     background: rgba(40, 42, 58, 0.90);
     border-radius: 20px;
-    color: #6e85b2;
+    color: #E0E4EE;
     font-size: 30px;
     filter: drop-shadow(3px 2px 3px rgba(0, 0, 0, 0.15));
+    font-family: "Montserrat Light", sans-serif;
 }
 
+/******************************************************* Articles *******************************************************/
+
+/* Stylisation de l'image principale de l'article */
 .imagePrincipale {
     border-radius: 20px;
     margin-top: 10px;
 }
 
+/* Stylisation du contenu de l'article */
 .contenuPrincipal {
-    margin-top: 25px;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items: stretch;
     justify-content: center;
 }
 
+/* Stylisation de la div de l'article */
 article {
     margin-right: 25px;
     margin-bottom: 25px;
-    padding: 5px;
+    padding: 10px;
     background: rgba(40, 42, 58, 0.90);
     border-radius: 20px;
     max-width: 75vw;
-
     font-size: 25px;
     text-align: left;
-    color: #6e85b2;
-
+    color: #E0E4EE;
     filter: drop-shadow(3px 2px 3px rgba(0, 0, 0, 0.15));
+    font-family: "Montserrat Light", sans-serif;
 }
 
+/* Stylisation du titre de l'article */
+article h2{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 3px;
+    margin: 20px 0;
+}
+
+/* Stylisation du sommaire de l'article */
 aside {
     display: flex;
     flex-direction: column;
@@ -146,42 +237,124 @@ aside {
     border-radius: 15px;
     margin-bottom: 25px;
     font-size: 23px;
-    color: #6e85b2;
+    color: #E0E4EE;
     text-align: left;
-
+    padding: 20px;
+    font-family: "Montserrat Light", sans-serif;
 }
 
+/* Stylisation de la liste du sommaire */
+aside ul{
+    padding: 10px;
+    list-style-type: '🡒 ';
+}
 
+/* Stylisation des items de la liste du sommaire */
+aside ul li{
+    transition: linear 0.3s;
+}
+
+/* Stylisation des items de la liste du sommaire quand surlignement */
+aside ul li:hover{
+    transition: linear 0.3s;
+    transform: translateX(10px);
+}
+
+/* Stylisation des liens des items du sommaire */
+aside li a{
+    color: #E0E4EE;
+}
+
+/* Stylisation des liens et des paragraphes du sommaire */
 aside > p, aside > a {
     margin: 10px auto;
 }
 
-
+/* Stylisation des paragraphes du sommaire */
 aside > p {
     text-decoration: underline;
 }
 
+/******************************************************* Contact *******************************************************/
+
+/* Positionnement du formulaire */
 form {
     display: flex;
     flex-direction: column;
 }
 
+/* Positionnement des champs du formulaire */
 input {
     font-size: 25px;
     max-width: 200px;
 }
 
+/* Stylisation du formulaire */
+.element fieldset{
+    font-family: "Montserrat Light", sans-serif;
+}
 
+/* Stylisation des champs du formulaire */
+.element input, .element textarea {
+    background: transparent;
+    border: 5px solid #0B0B10;
+    padding: 10px;
+    font-family: "Montserrat Light", sans-serif;
+    font-size: 20pt;
+    margin: 5px;
+    transition: border 1s, background 1s, color 1s;
+    font-weight: bold;
+    color: #E0E4EE;
+}
+
+/* Stylisation des champs du formulaire quand surlignement ou quand clickés */
+.element input:active, .element input:focus, .element textarea:active, .element textarea:focus {
+    background: #0B0B10;
+    border: 5px solid #a7b0ff;
+    color: #a7b0ff;
+    transition: border 1s, background 1s, color 1s;
+}
+
+/* Stylisation des cases/radios button */
+.element input[type=checkbox], .element input[type=radio] {
+    transform: scale(2) translateY(-1px);
+}
+
+/* Stylisation des placeholders des champs */
+.element input::placeholder, .element textarea::placeholder, .element input[type=date] {
+    color: #949494;
+}
+
+/* Positionnement des éléments du formulaire */
+.contact .element{
+    width: 80vw;
+}
+
+/******************************************************* Media Queries *******************************************************/
+
+/* Stylisation des éléments pour les écrans de moins de 1340px de large */
+@media screen and (max-width: 1340px) {
+    /* Positionnement des éléments du formulaire */
+    .contact .element{
+        width: 100vw;
+    }
+}
+
+/* Stylisation des éléments pour les écrans de moins de 950px de large */
 @media screen and (max-width: 950px) {
+    /******************** Général ********************/
 
+    /* Enlève la barre de navigation */
     nav {
         display: none;
     }
 
+    /* Enlève le sommaire */
     aside {
         display: none;
     }
 
+    /* Modifie le comportement du header */
     header {
         display: flex;
         max-width: 100%;
@@ -191,6 +364,7 @@ input {
         backdrop-filter: blur(5px);
     }
 
+    /* Modifie la stylisation du titre */
     #title {
         color: #6E85B2FF;
         display: inherit;
@@ -198,6 +372,7 @@ input {
         font-size: 5vw;
     }
 
+    /* Affiche le bouton burger */
     .burger {
         display: flex;
         flex-direction: column;
@@ -205,16 +380,19 @@ input {
         font-size: 30px;
     }
 
+    /* Affiche le menu quand le bouton burger est surligné */
     .burger:hover .respMenu {
         display: flex;
         flex-direction: column;
         border-radius: 10px;
     }
 
+    /* Modifie le comportement du bouton burger */
     #imgBurgerDiv {
         display: inherit;
     }
 
+    /* Affiche le menu version mobile */
     .respMenu {
         position: absolute;
         top: 88px;
@@ -223,19 +401,41 @@ input {
         background-color: rgba(40, 42, 58, 0.9);
     }
 
-    .imagePrincipale, #title, article {
-        max-width: 75vw;
-    }
-
+    /* Modifie la taille de la police */
     .element {
         font-size: 3vw;
     }
 
-    .references {
-        word-break: break-word; /*permet au lien de ne pas depasser le parent*/
+    /******************** Article ********************/
+
+    /* Centre les éléments de la page */
+    .imagePrincipale, #title, article {
+        max-width: 75vw;
     }
 
+    /* Permet au lien de ne pas dépasser le parent */
+    .references {
+        word-break: break-word;
+    }
 
+    /******************** Contact ********************/
+
+    /* Modifie la taille de la zone de texte */
+    .element textarea {
+        resize: none;
+        width: 80%;
+        height: 100px;
+    }
+
+    /* Modifie la taille des cases/radios button */
+    .element input[type=checkbox], .element input[type=radio] {
+        transform: scale(1) translateY(3px);
+    }
+
+    /* Modifie la taille de la police des champs */
+    .element input, .element textarea {
+        font-size: 10pt;
+    }
 }
 
 
