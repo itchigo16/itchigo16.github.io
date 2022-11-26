@@ -215,7 +215,7 @@ input {
     }
 
     .references {
-        word-wrap: break-word; /*permet au lien de ne pas depasser le parent*/
+        word-break: break-word; /*permet au lien de ne pas depasser le parent*/
     }
 
 
