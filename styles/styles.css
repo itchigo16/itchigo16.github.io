@@ -66,7 +66,7 @@ header {
 }
 
 /* Stylisation des titres */
-#title, .title{
+#title, .title {
     text-align: center;
     text-decoration: underline #a7b0ff;
     font-family: "Montserrat Medium", sans-serif;
@@ -101,7 +101,7 @@ nav {
     font-size: 35px;
     text-align: center;
     padding: 5px;
-    font-family: "Bebas Neue", sans-serif ;
+    font-family: "Bebas Neue", sans-serif;
     transition: linear 0.3s;
 }
 
@@ -135,10 +135,10 @@ nav {
 }
 
 /* Stylisation des items du sous-menu */
-.respMenu a{
+.respMenu a {
     font-family: "Bebas Neue", sans-serif;
     transition: none;
-    letter-spacing: 0!important;
+    letter-spacing: 0 !important;
 }
 
 /* Stylisation des liens */
@@ -227,7 +227,7 @@ article {
 }
 
 /* Stylisation du titre de l'article */
-article h2{
+article h2 {
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 3px;
     margin: 20px 0;
@@ -248,24 +248,24 @@ aside {
 }
 
 /* Stylisation de la liste du sommaire */
-aside ul{
+aside ul {
     padding: 10px;
     list-style-type: '🡒 ';
 }
 
 /* Stylisation des items de la liste du sommaire */
-aside ul li{
+aside ul li {
     transition: linear 0.3s;
 }
 
 /* Stylisation des items de la liste du sommaire quand surlignement */
-aside ul li:hover{
+aside ul li:hover {
     transition: linear 0.3s;
     transform: translateX(10px);
 }
 
 /* Stylisation des liens des items du sommaire */
-aside li a{
+aside li a {
     color: #E0E4EE;
 }
 
@@ -294,12 +294,12 @@ input {
 }
 
 /* Stylisation du formulaire */
-.element fieldset{
+.element fieldset {
     font-family: "Montserrat Light", sans-serif;
 }
 
 /* Stylisation des champs du formulaire */
-.element input, .element textarea {
+.element input, .element textarea, .element select {
     background: transparent;
     border: 5px solid #0B0B10;
     padding: 10px;
@@ -312,7 +312,7 @@ input {
 }
 
 /* Stylisation des champs du formulaire quand surlignement ou quand clickés */
-.element input:active, .element input:focus, .element textarea:active, .element textarea:focus {
+.element input:active, .element input:focus, .element textarea:active, .element textarea:focus, .element select:focus {
     background: #0B0B10;
     border: 5px solid #a7b0ff;
     color: #a7b0ff;
@@ -325,12 +325,18 @@ input {
 }
 
 /* Stylisation des placeholders des champs */
-.element input::placeholder, .element textarea::placeholder, .element input[type=date] {
+.element input::placeholder, .element textarea::placeholder, .element input[type=date], .element select {
     color: #949494;
 }
 
+/* Changement de la taille du spinner */
+.element input[type=number] {
+    width: 10%;
+}
+
 /* Positionnement des éléments du formulaire */
-.contact .element{
+.contact .element {
+    margin-top: 25px;
     width: 80vw;
 }
 
@@ -339,7 +345,7 @@ input {
 /* Stylisation des éléments pour les écrans de moins de 1340px de large */
 @media screen and (max-width: 1340px) {
     /* Positionnement des éléments du formulaire */
-    .contact .element{
+    .contact .element {
         width: 100vw;
     }
 }
@@ -347,7 +353,6 @@ input {
 /* Stylisation des éléments pour les écrans de moins de 950px de large */
 @media screen and (max-width: 950px) {
     /******************** Général ********************/
-
     /* Enlève la barre de navigation */
     nav {
         display: none;
@@ -411,7 +416,6 @@ input {
     }
 
     /******************** Article ********************/
-
     /* Centre les éléments de la page */
     .imagePrincipale, #title, article {
         max-width: 75vw;
@@ -428,7 +432,6 @@ input {
     }
 
     /******************** Contact ********************/
-
     /* Modifie la taille de la zone de texte */
     .element textarea {
         resize: none;
@@ -444,6 +447,11 @@ input {
     /* Modifie la taille de la police des champs */
     .element input, .element textarea {
         font-size: 10pt;
+    }
+
+    /* Modifie la taille des select pour qu'ils restent accessibles */
+    .element select {
+        width: 65vw;
     }
 }
 
