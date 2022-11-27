@@ -413,6 +413,11 @@ input {
         max-width: 75vw;
     }
 
+    /* Reduit la taille de la police pour la rendre plus lisible*/
+    .contenuPrincipal article {
+        font-size: 16px;
+    }
+
     /* Permet au lien de ne pas dépasser le parent */
     .references {
         word-break: break-word;
