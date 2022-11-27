@@ -408,6 +408,7 @@ input {
         right: 2vw;
         display: none;
         background-color: rgba(40, 42, 58, 0.9);
+        padding: 10px;
     }
 
     /* Modifie la taille de la police */
