@@ -429,7 +429,7 @@ input {
 
     /* Permet au lien de ne pas dépasser le parent */
     .references {
-        word-break: break-word;
+        word-break: break-all;
     }
 
     /******************** Contact ********************/
