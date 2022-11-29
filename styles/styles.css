@@ -105,6 +105,10 @@ nav {
     transition: linear 0.3s;
 }
 
+.sous_menu > a {
+    font-size: 30px;
+}
+
 /* Stylisation des items du menu quand surlignement */
 .menu a:hover {
     letter-spacing: 2px;
@@ -310,6 +314,7 @@ input {
     transition: border 1s, background 1s, color 1s;
     font-weight: bold;
     color: #E0E4EE;
+    max-width: 100%;
 }
 
 /* Stylisation des champs du formulaire quand surlignement ou quand clickés */
@@ -338,7 +343,11 @@ input {
 /* Positionnement des éléments du formulaire */
 .contact .element {
     margin-top: 25px;
-    width: 80vw;
+    max-width: 80vw;
+}
+
+#commentaire {
+    width: 80%;
 }
 
 /******************************************************* Media Queries *******************************************************/
@@ -394,16 +403,18 @@ input {
     .burger:hover .respMenu {
         display: flex;
         border-radius: 10px;
-        transform: translateX(-100vw);
+        transform: translateX(-50vw);
         opacity: 100%;
     }
 
+    /* Set les transitions pour l'image du burger */
     .burger img {
         transition: linear 0.35s;
     }
 
+    /* Grossi le burger lorsque survolé */
     .burger:hover img {
-        scale: 1.1;
+        transform: scale(1.1);
     }
 
     /* Modifie le comportement du bouton burger */
@@ -477,15 +488,14 @@ input {
     }
 
 }
-
-/* Stylisation des éléments pour les elements entre 400px et 950px de large */
-@media (min-width: 400px) {
+/* Stylisation des éléments pour les écrans de moins de 1340px de large */
+@media screen and (max-width: 370px) {
 
     /* Affiche le menu quand le bouton burger est surligné */
     .burger:hover .respMenu {
         display: flex;
         border-radius: 10px;
-        transform: translateX(-50vw);
+        transform: translateX(-80vw);
         opacity: 100%;
     }
 }
