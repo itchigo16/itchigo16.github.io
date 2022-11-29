@@ -379,7 +379,7 @@ input {
         color: #6E85B2FF;
         display: inherit;
         text-align: center;
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     /* Affiche le bouton burger */
@@ -393,8 +393,9 @@ input {
     /* Affiche le menu quand le bouton burger est surligné */
     .burger:hover .respMenu {
         display: flex;
-        flex-direction: column;
         border-radius: 10px;
+        transform: translateX(-100vw);
+        opacity: 100%;
     }
 
     .burger img {
@@ -412,12 +413,23 @@ input {
 
     /* Affiche le menu version mobile */
     .respMenu {
-        position: absolute;
-        top: 88px;
-        right: 2vw;
-        display: none;
+        position: fixed;
+        justify-content: center;
+        flex-direction: column;
+
+        top: 10vh;
+        left: 100vw;
+
+        width: 100vw;
+        height: 90vh;
+
+        padding-left: 30px;
+
         background-color: rgba(40, 42, 58, 0.9);
-        padding: 10px;
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        transition: linear 0.1s;
+
     }
 
     /* Modifie la taille de la police */
@@ -462,6 +474,19 @@ input {
     /* Modifie la taille des select pour qu'ils restent accessibles */
     .element select {
         width: 65vw;
+    }
+
+}
+
+/* Stylisation des éléments pour les elements entre 400px et 950px de large */
+@media (min-width: 400px) {
+
+    /* Affiche le menu quand le bouton burger est surligné */
+    .burger:hover .respMenu {
+        display: flex;
+        border-radius: 10px;
+        transform: translateX(-50vw);
+        opacity: 100%;
     }
 }
 
