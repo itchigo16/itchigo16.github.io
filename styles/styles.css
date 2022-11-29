@@ -312,7 +312,7 @@ input {
 }
 
 /* Stylisation des champs du formulaire quand surlignement ou quand clickés */
-.element input:active, .element input:focus, .element textarea:active, .element textarea:focus, .element select:focus {
+.element input:active, .element input:focus, .element textarea:active, .element textarea:focus, .element select:active, .element select:focus {
     background: #0B0B10;
     border: 5px solid #a7b0ff;
     color: #a7b0ff;
@@ -325,7 +325,7 @@ input {
 }
 
 /* Stylisation des placeholders des champs */
-.element input::placeholder, .element textarea::placeholder, .element input[type=date], .element select {
+.element input::placeholder, .element textarea::placeholder, .element input[type=date] {
     color: #949494;
 }
 
