@@ -397,6 +397,14 @@ input {
         border-radius: 10px;
     }
 
+    .burger img {
+        transition: linear 0.35s;
+    }
+
+    .burger:hover img {
+        scale: 1.1;
+    }
+
     /* Modifie le comportement du bouton burger */
     #imgBurgerDiv {
         display: inherit;
