@@ -235,8 +235,10 @@ article {
 }
 
 article strong {
-    color: orange;
+    color: #fffade;
 }
+
+
 
 /* Stylisation du titre de l'article */
 article h2 {
