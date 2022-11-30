@@ -193,6 +193,7 @@ main > div {
 
 /* Stylisation des divs element */
 .element {
+    margin-top: 10vh;
     background: rgba(40, 42, 58, 0.90);
     border-radius: 20px;
     color: #E0E4EE;
@@ -355,7 +356,6 @@ input {
 
 /* Positionnement des éléments du formulaire */
 .contact .element {
-    margin-top: 25px;
     max-width: 80vw;
 }
 
