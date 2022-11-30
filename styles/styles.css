@@ -237,6 +237,9 @@ article {
 article strong {
     color: #fffade;
 }
+article p{
+    text-align: justify;
+}
 
 
 
