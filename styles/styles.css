@@ -456,9 +456,10 @@ input {
 
     }
 
-    /* Modifie la taille de la police */
+    /* Modifie le comportement du div element  */
     .element {
         font-size: 3vw;
+        margin-top: 3vh;
     }
 
     /******************** Article ********************/
@@ -467,8 +468,9 @@ input {
         max-width: 75vw;
     }
 
-    /* Reduit la taille de la police pour la rendre plus lisible*/
+    /* Reduit la taille de la police pour la rendre plus lisible et enleve le margin*/
     .contenuPrincipal article {
+        margin-right: 0;
         font-size: 16px;
     }
 
