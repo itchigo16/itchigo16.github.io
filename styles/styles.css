@@ -234,6 +234,10 @@ article {
     font-family: "Montserrat Light", sans-serif;
 }
 
+article strong {
+    color: orange;
+}
+
 /* Stylisation du titre de l'article */
 article h2 {
     font-family: "Bebas Neue", sans-serif;
