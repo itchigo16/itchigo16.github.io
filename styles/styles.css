@@ -269,7 +269,7 @@ aside {
 /* Stylisation de la liste du sommaire */
 aside ul {
     padding: 10px;
-    list-style-type: '🡒 ';
+    list-style-type: "\21A3\ ";
 }
 
 /* Stylisation des items de la liste du sommaire */
