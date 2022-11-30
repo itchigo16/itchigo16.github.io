@@ -109,9 +109,12 @@ nav {
     font-size: 30px;
 }
 
+.menu > a:hover {
+    letter-spacing: 2px;
+}
+
 /* Stylisation des items du menu quand surlignement */
 .menu a:hover {
-    letter-spacing: 2px;
     animation-name: menuAnimation;
     animation-duration: 1s;
     animation-iteration-count: 1;
