@@ -193,6 +193,7 @@ main > div {
 
 /* Stylisation des divs element */
 .element {
+    margin-top: 10vh;
     background: rgba(40, 42, 58, 0.90);
     border-radius: 20px;
     color: #E0E4EE;
@@ -268,7 +269,7 @@ aside {
 /* Stylisation de la liste du sommaire */
 aside ul {
     padding: 10px;
-    list-style-type: '🡒 ';
+    list-style-type: "\21A3\ ";
 }
 
 /* Stylisation des items de la liste du sommaire */
@@ -355,7 +356,6 @@ input {
 
 /* Positionnement des éléments du formulaire */
 .contact .element {
-    margin-top: 25px;
     max-width: 80vw;
 }
 
@@ -456,9 +456,10 @@ input {
 
     }
 
-    /* Modifie la taille de la police */
+    /* Modifie le comportement du div element  */
     .element {
         font-size: 3vw;
+        margin-top: 3vh;
     }
 
     /******************** Article ********************/
@@ -467,8 +468,9 @@ input {
         max-width: 75vw;
     }
 
-    /* Reduit la taille de la police pour la rendre plus lisible*/
+    /* Reduit la taille de la police pour la rendre plus lisible et enleve le margin*/
     .contenuPrincipal article {
+        margin-right: 0;
         font-size: 16px;
     }
 
