@@ -5,6 +5,8 @@
 
 /******************************************************* Scrollbar *******************************************************/
 
+/* Toute cette partie change la ScrollBar sur Chrome uniquement */
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -23,7 +25,7 @@
 
 /******************************************************* Général *******************************************************/
 
-/* Paramétrage du scroll */
+/* Paramétrage du scroll (pour que ça soit fluide) */
 html {
     scroll-behavior: smooth;
 }
@@ -113,7 +115,7 @@ nav {
     letter-spacing: 2px;
 }
 
-/* Stylisation des items du menu quand surlignement */
+/* Stylisation des items du menu quand surlignement, active @keyframes menuAnimation pendant 1s, et se repete 1 fois */
 .menu a:hover {
     animation-name: menuAnimation;
     animation-duration: 1s;
@@ -121,7 +123,7 @@ nav {
     animation-play-state: running;
 }
 
-/* Animation des items du menu */
+/* Animation des items du menu, change d'une couleur a une autre lorsque activé */
 @keyframes menuAnimation {
     from {
         color: #a7b0ff;
@@ -145,7 +147,7 @@ nav {
 .respMenu a {
     font-family: "Bebas Neue", sans-serif;
     transition: none;
-    letter-spacing: 0 !important;
+    letter-spacing: 0 !important; /* cet ligne sera activé meme si a un autre endroit les element ciblé ont d'autre parametres */
 }
 
 /* Stylisation des liens */
@@ -234,15 +236,15 @@ article {
     filter: drop-shadow(3px 2px 3px rgba(0, 0, 0, 0.15));
     font-family: "Montserrat Light", sans-serif;
 }
-
+/* stylise les elements en gras dans les articles */
 article strong {
     color: #fffade;
 }
+
+/* stylise les paragraphes */
 article p{
     text-align: justify;
 }
-
-
 
 /* Stylisation du titre de l'article */
 article h2 {
@@ -269,7 +271,7 @@ aside {
 /* Stylisation de la liste du sommaire */
 aside ul {
     padding: 10px;
-    list-style-type: "\21A3\ ";
+    list-style-type: "\21A3\ "; /* UTF-8 d'une fleche */
 }
 
 /* Stylisation des items de la liste du sommaire */
@@ -450,7 +452,6 @@ input {
         padding-left: 30px;
 
         background-color: rgba(40, 42, 58, 0.9);
-        backdrop-filter: blur(10px);
         opacity: 0;
         transition: linear 0.1s;
 
