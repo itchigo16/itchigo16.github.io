@@ -204,6 +204,15 @@ main > div {
     font-family: "Montserrat Light", sans-serif;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 10vw;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
 /******************************************************* Articles *******************************************************/
 
 /* Stylisation de l'image principale de l'article */
@@ -383,6 +392,10 @@ input {
         display: none;
     }
 
+    footer {
+        display: none;
+    }
+
     /* Enlève le sommaire */
     aside {
         display: none;
@@ -416,7 +429,6 @@ input {
 
     /* Affiche le menu quand le bouton burger est surligné */
     .burger:hover .respMenu {
-        display: flex;
         border-radius: 10px;
         transform: translateX(-50vw);
         opacity: 100%;
@@ -439,6 +451,7 @@ input {
 
     /* Affiche le menu version mobile */
     .respMenu {
+        display: flex;
         position: fixed;
         justify-content: center;
         flex-direction: column;
@@ -452,9 +465,17 @@ input {
         padding-left: 30px;
 
         background-color: rgba(40, 42, 58, 0.9);
-        opacity: 0;
+        opacity: 100;
         transition: linear 0.1s;
 
+    }
+
+    .respMenu .copyright {
+        font-size: 15px;
+        position: absolute;
+        bottom: 0;
+        max-width: 25%;
+        text-align: center;
     }
 
     /* Modifie le comportement du div element  */
